@@ -1,10 +1,15 @@
 {
-  "tasks": {
-    "dev": "deno run --watch main.ts",
-    "typecheck": "deno check main.ts"
-  },
   "imports": {
-    "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.7",
-    "@std/assert": "jsr:@std/assert@1"
+    "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.7"
+  },
+  "tasks": {
+    "start": "deno run --allow-read main.ts",
+    "dev": "deno run --watch --allow-read main.ts",
+    "test": "deno test --allow-read"
+  },
+  "fmt": {
+    "include": ["**/*.ts"],
+    "indentWidth": 2,
+    "singleQuote": true
   }
 }
